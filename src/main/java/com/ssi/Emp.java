@@ -10,7 +10,8 @@ public class Emp {
 	private String ename;
 	private int sal;
 	private String desg;
-			
+	
+	
 	public Emp() {
 		super();
 	}
@@ -45,6 +46,7 @@ public class Emp {
 	public void setDesg(String desg) {
 		this.desg = desg;
 	}
+	
 	
 	
 	
