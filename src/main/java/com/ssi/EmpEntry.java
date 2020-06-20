@@ -15,13 +15,17 @@ public class EmpEntry {
 		// we wish to save this object in db.
 		
 		//creating a configuration object to read the data from our configuration file.
-		Configuration config=new Configuration().configure();
+		//Configuration config=new Configuration().configure();
 		
 		//create a SessionFactory object (to create Session object)
-		SessionFactory sessionFactory=config.buildSessionFactory();
+		//SessionFactory sessionFactory=config.buildSessionFactory();
 		
 		//creating a Session instance for performing CRUD operations.
-		Session session=sessionFactory.openSession();
+		//Session session=sessionFactory.openSession();
+		
+		Session session=Utility.getSF().openSession();
+		
+		
 		
 		//will insert a record using save method
 		Transaction transaction=session.beginTransaction();
