@@ -46,7 +46,10 @@ public class Emp {
 	public void setDesg(String desg) {
 		this.desg = desg;
 	}
-	
+	@Override
+	public String toString() {
+		return "Emp [eno=" + eno + ", ename=" + ename + ", sal=" + sal + ", desg=" + desg + "]";
+	}
 	
 	
 	

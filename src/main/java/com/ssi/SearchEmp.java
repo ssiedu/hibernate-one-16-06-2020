@@ -15,12 +15,14 @@ public class SearchEmp {
 		Session session=Utility.getSF().openSession();
 		
 		Emp emp=session.get(Emp.class, code);	//SELECT
-		
+		//Emp emp=session.load(Emp.class,code);
+		System.out.println(emp);
+		/*
 		System.out.println(emp.getEno());
 		System.out.println(emp.getEname());
 		System.out.println(emp.getSal());
 		System.out.println(emp.getDesg());
-		
+		*/
 		session.close();
 	}
 
