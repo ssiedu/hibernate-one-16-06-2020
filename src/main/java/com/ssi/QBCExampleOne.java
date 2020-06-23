@@ -17,16 +17,22 @@ public class QBCExampleOne {
 		
 		Criteria cr=session.createCriteria(Emp.class);	
 		
-		//Order order=Order.desc("sal");
-		Order order=Order.asc("sal");
-		cr.addOrder(order);
-		
+		Order order1=Order.asc("sal");
+		Order order2=Order.asc("ename");
+		cr.addOrder(order1);
+		cr.addOrder(order2);
+			
 		List<Emp> employees=cr.list();		//SELECT QUERY GENERATED
 		
+		for(Emp emp:employees) {
+			System.out.println(emp);
+		}
+
+	/*	
 		for(int i=0; i<employees.size(); i++) {
 			Emp emp=employees.get(i);
 			System.out.println(emp);
-		}
+		}*/
 		
 		
 		/*
